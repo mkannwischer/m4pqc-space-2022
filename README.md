@@ -25,10 +25,13 @@ You can test if you have the right version installed by
 qemu-system-arm --version
 ```
 
-3) Install the [Arm gcc toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
-I recommend using the `11.3.Rel1`!
+3) Install the [Arm gcc toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads).
+I recommend using the `11.3.Rel1` version: 
  - Download the `AArch32 bare-metal target (arm-none-eabi)` toolchain for your platform, e.g., `arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi.tar.xz` if you are running Linux on a `x86_64` machine.
- - Unpack the archive, e.g., `sudo tar -xf arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi.tar.xz -C /opt/`
+ - Unpack the archive, e.g.,
+```
+sudo tar -xf arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi.tar.xz -C /opt/
+```
  - Add binaries to your $PATH, for example append the following to your `~/.bashrc` (e.g., via `gedit ~/.bashrc`)
 ```
 export PATH=$PATH:/opt/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin
@@ -43,7 +46,7 @@ You should not be able to run
 Note: `arm-non-eabi-gcc` is also available from the `apt`, but is often outdated.
 It is recommended to get it directly from the Arm website.
 
-4) For on-board testing: Install st-link:
+4) For on-board testing, install st-link:
 ```
 # Ubuntu
 sudo apt install stlink-tools
