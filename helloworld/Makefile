@@ -19,7 +19,7 @@ obj/_ELFNAME_%.o: $(LINKDEPS)
 	$(Q)echo "const char _elf_name[] = \"$(ELFNAME)\";" | \
 		$(CC) -x c -c -o $@ $(filter-out -g3,$(CFLAGS)) -
 
-elf/%.elf: obj/_ELFNAME_%.elf.o
+elf/%.elf: obj/_ELFNAME_%.elf.o $(LINKDEPS)
 	@echo "  LD      $@"
 	$(Q)[ -d $(@D) ] || mkdir -p $(@D)
 	$(Q)$(LD) $(LDFLAGS) -o $@ $(filter %.o,$^) -Wl,--start-group $(LDLIBS) -Wl,--end-group
