@@ -34,16 +34,16 @@ sudo tar -xf arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi.tar.xz -C /opt/
 ```
  - Add binaries to your $PATH, for example append the following to your `~/.bashrc` (e.g., via `gedit ~/.bashrc`)
 ```
-export PATH=$PATH:/opt/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin
+export PATH=/opt/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-eabi/bin:$PATH
 ```
   - Reload your `~/.bashrc` via `source ~/.bashrc`
 
-You should not be able to run
+You should now be able to run
 ```
- arm-non-eabi-gcc --version
+ arm-none-eabi-gcc --version
 ```
 
-Note: `arm-non-eabi-gcc` is also available from the `apt`, but is often outdated.
+Note: `arm-none-eabi-gcc` is also available from the `apt`, but is often outdated.
 It is recommended to get it directly from the Arm website.
 
 4) For on-board testing, install st-link:
