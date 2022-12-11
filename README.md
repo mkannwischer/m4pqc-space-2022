@@ -96,4 +96,4 @@ in another terminal and pressing the reset button of the board.
 
 # Tutorial instructions
 
-TBA
+Follow the instructions on the slides (https://kannwischer.eu/talks/20221212_space.pdf) starting from slide 98.
