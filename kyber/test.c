@@ -80,10 +80,9 @@ int test_nttlayer1(void){
 
   for(int i=0;i<256;i++){
     if((a[i]-aref[i])%Q != 0){
-
-      unsigned char str[100];
-      sprintf(str, "%d %d <-> %d", i, a[i], aref[i]);
-      hal_send_str(str);
+      // unsigned char str[100];
+      // sprintf(str, "%d %d <-> %d", i, a[i], aref[i]);
+      // hal_send_str(str);
       err = -1;
     }
   }
